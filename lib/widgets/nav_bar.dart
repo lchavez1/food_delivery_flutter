@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants/colors.dart';
+
 class CustomAppBar extends StatelessWidget {
 
   final IconData leftIcon, rightIcon;
@@ -26,12 +28,12 @@ class CustomAppBar extends StatelessWidget {
 
   Widget _buildIcon(IconData icon){
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.white
+        color: backgroundColor
       ),
-      child: Icon(icon),
+      child: Icon(icon, size: 30,),
     );
   }
 
