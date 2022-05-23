@@ -11,18 +11,19 @@ class Restaurant{
 
   static generateRestaurant(){
     return Restaurant(
-        'Burger King',
+        'Burger & Noodles High',
         '20-30 min',
         '2.4 km',
         'Restaurant',
-        'https://cdn-icons-png.flaticon.com/512/5977/5977578.png',
+        'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cooking-restaurant-logo-editable-design-template-1937334dced5f5057b812d746dbffc28_screen.jpg',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        4.7,
+        4.8,
         {
           'Recommended' : Food.generateRecommendedFoods(),
-          'Popular' : Food.generatePopularFoods(),
-          'Noodles' : [],
-          'Pizza' : []
+          'Burger' : Food.generateBurgers(),
+          'Noodles' : Food.generateNoodles(),
+          'Pizza' : Food.generatePizza(),
+          'Dessert' : Food.generateDessert()
         }
     );
   }

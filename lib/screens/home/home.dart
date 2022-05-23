@@ -1,4 +1,5 @@
 import 'package:delivery_food_app/constants/colors.dart';
+import 'package:delivery_food_app/screens/profile/profile_page.dart';
 import 'package:delivery_food_app/widgets/restaurant_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -28,7 +29,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomAppBar(Icons.arrow_back_ios_outlined, Icons.search_outlined),
+          CustomAppBar(Icons.person, Icons.search_outlined, leftCallback: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()))),
           RestaurantInfo(),
           FoodList(selected, (int index){
               setState(() {
