@@ -1,4 +1,5 @@
 import 'package:delivery_food_app/constants/colors.dart';
+import 'package:delivery_food_app/screens/detail/widget/food_quantity_order.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -6,10 +7,13 @@ import '../../../models/food.dart';
 import 'foof_quantity.dart';
 
 class FoodDetail extends StatelessWidget {
+
   final Food food;
   FoodDetail(this.food);
+
   @override
   Widget build(BuildContext context) {
+
     return Container(
       padding: EdgeInsets.all(25),
       color: backgroundColor,

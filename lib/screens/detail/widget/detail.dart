@@ -1,6 +1,7 @@
 import 'package:delivery_food_app/constants/colors.dart';
 import 'package:delivery_food_app/screens/detail/widget/food_detail.dart';
 import 'package:delivery_food_app/screens/detail/widget/food_img.dart';
+import 'package:delivery_food_app/screens/detail/widget/food_quantity_order.dart';
 import 'package:delivery_food_app/widgets/nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class DetailPage extends StatelessWidget {
   DetailPage(this.food);
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: primaryColor,
       body: SingleChildScrollView(

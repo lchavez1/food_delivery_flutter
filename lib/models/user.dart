@@ -14,7 +14,7 @@ class User{
       'Luis Chavez',
       'https://thypix.com/wp-content/uploads/2022/02/paired-avatars-anime-1553-700x700.jpg',
       'San Francisco, CA',
-      '(429) - 117 - 0436',
+      '(415) 239-5761',
       4.9
     );
   }
