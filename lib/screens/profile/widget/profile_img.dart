@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import '../../../constants/colors.dart';
 
 class ProfileImg extends StatelessWidget{
+
+  String image;
+  ProfileImg(this.image);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +24,7 @@ class ProfileImg extends StatelessWidget{
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50)),
-                    color: backgroundColor,
+                    color: backgroundColor2,
                   ),
                 ),
               ),
@@ -40,7 +44,9 @@ class ProfileImg extends StatelessWidget{
                     blurRadius: 10,
                   )]
               ),
-              child: Image.network('https://thypix.com/wp-content/uploads/2022/02/paired-avatars-anime-1553-700x700.jpg', fit: BoxFit.cover,),
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(image),
+              ),
             ),
           ),
         ],

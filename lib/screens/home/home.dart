@@ -1,4 +1,5 @@
 import 'package:delivery_food_app/constants/colors.dart';
+import 'package:delivery_food_app/models/user.dart';
 import 'package:delivery_food_app/screens/profile/profile_page.dart';
 import 'package:delivery_food_app/widgets/restaurant_info.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class _HomePageState extends State<HomePage> {
   var selected = 0;
   final pageController = PageController();
   final restaurant = Restaurant.generateRestaurant();
+  final user = User.generateUser();
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomAppBar(Icons.person, Icons.search_outlined, leftCallback: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()))),
+          CustomAppBar(Icons.person, Icons.search_outlined, leftCallback: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(user)))),
           RestaurantInfo(),
           FoodList(selected, (int index){
               setState(() {

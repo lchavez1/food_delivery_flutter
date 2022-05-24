@@ -11,7 +11,7 @@ class Restaurant{
 
   static generateRestaurant(){
     return Restaurant(
-        'Burger & Noodles High',
+        'Cooking Master',
         '20-30 min',
         '2.4 km',
         'Restaurant',

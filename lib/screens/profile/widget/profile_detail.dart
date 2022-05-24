@@ -1,29 +1,61 @@
+import 'package:delivery_food_app/models/user.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/colors.dart';
 
 class ProfileDetail extends StatelessWidget{
+
+  User user;
+  ProfileDetail(this.user);
+
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(25),
-        color: backgroundColor,
+        color: backgroundColor2,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Luis Chavez', style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
-            ),),
-            SizedBox(height: 30,),
-            Text('Location: Guanajuato, Mexico.', style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
-            ),),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(user.name, style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),),
+                Icon(Icons.verified, color: Colors.blue,),
+              ],
+            ),
             SizedBox(height: 10,),
-            Text('Phone: (429) - 117 - 0436', style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
-            ),),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.star_border, color: primaryColor,),
+                Text(user.score.toString())
+              ],
+            ),
+            SizedBox(height: 30,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.location_city_outlined),
+                    SizedBox(width: 8,),
+                    Text(user.location),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.phone),
+                    SizedBox(width: 8,),
+                    Text(user.phone),
+                  ],
+                ),
+              ],
+            ),
           ],
         )
     );
