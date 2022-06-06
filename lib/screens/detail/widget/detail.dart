@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../models/food.dart';
+import '../../order/order_page.dart';
 
 class DetailPage extends StatelessWidget {
   final Food food;
@@ -56,7 +57,7 @@ class DetailPage extends StatelessWidget {
               ),
             ],
           ),
-          onPressed: (){},
+          onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => OrderPage(food))),
         ),
       ),
     );
