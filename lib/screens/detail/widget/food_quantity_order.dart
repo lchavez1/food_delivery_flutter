@@ -5,7 +5,7 @@ import '../../../constants/colors.dart';
 class FoodQuantityOrder extends StatefulWidget{
 
   int quantity;
-  FoodQuantityOrder({this.quantity = 0});
+  FoodQuantityOrder({this.quantity = 1});
 
   @override
   State<FoodQuantityOrder> createState() => _FoodQuantityOrderState();
